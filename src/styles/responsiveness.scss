@@ -1,0 +1,23 @@
+@media screen and (max-width: 1170px) {
+  .dc-btnStyle{
+    margin: 0 1rem 1rem 0 !important;
+  }
+
+  .dc-buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+
+    .dc-btnStyle{
+      margin: 0 0 1rem 0 !important;
+    }
+  }
+

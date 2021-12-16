@@ -1,0 +1,43 @@
+.dc-form-container{
+    margin: 2rem 2rem;
+}
+
+
+.dc-input-style-container{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.dc-input-style{
+    height: 45px;
+    border: 1px solid #1A73E8;
+    background: #fff;
+    border-radius: 10px;
+    padding: 0 10px;
+    color: #1A73E8;
+
+    &:focus{
+        outline: none !important;
+     }
+}
+
+.dc-label-style{
+    margin: 0 0 5px 0;
+    color: #1A73E8;
+}
+
+.dc-store-details-btn{
+    height: 47px !important;
+    width: 350px !important;
+    border: 1px solid #1A73E8 !important;
+    margin: 5px 0 0 0 !important;
+    color: #1A73E8 !important;
+
+}
+
+.dc-error-style{
+    margin: 2px 0 0 0;
+    color: red;
+    font-size: 12px;
+}
