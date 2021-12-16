@@ -13,13 +13,13 @@ const Header = ({ isInitialPage, onHandleClick, onHandleBackBtn }) => {
           height={30}
         />
       ) : (
-        <button className="dc-header-refresh-style" onClick={onHandleBackBtn}>
+        <button className="dc-header-btn-style" onClick={onHandleBackBtn}>
           <AiOutlineArrowLeft />
           <span className="db-header-refresh-btn-text-style"> Back</span>
         </button>
       )}
 
-      <button className="dc-header-refresh-style" onClick={onHandleClick}>
+      <button className="dc-header-btn-style" onClick={onHandleClick}>
         <HiRefresh />
         <span className="db-header-refresh-btn-text-style"> Start Over</span>
       </button>

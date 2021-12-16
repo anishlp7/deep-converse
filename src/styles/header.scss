@@ -7,7 +7,7 @@
     border-bottom: 1px solid #b3b3b3;
 }
 
-.dc-header-refresh-style{
+.dc-header-btn-style{
     display: flex;
     padding: 0.5rem;
     border: 1px solid #b9b9b9;
@@ -15,6 +15,7 @@
     background: #fff;
     cursor: pointer;
     color: #252424;
+    animation: slide-in 1s;
 
     &:hover{
         background: #1A73E8;
@@ -24,4 +25,17 @@
 
 .db-header-refresh-btn-text-style{
     margin: 0 0 0 5px;
+}
+
+// Slide In Animation
+@keyframes slide-in {
+    from {
+        display: none;
+        transform: translateX(-100%);
+    }
+
+    to {
+        display: flex;
+        transform: translateX(0%);
+    }
 }
