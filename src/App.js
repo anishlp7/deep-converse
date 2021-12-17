@@ -25,12 +25,25 @@ function App() {
       } else {
         setIsInitialPage(false);
       }
-  }, [questionNumber])
+  }, [questionNumber]);
+
+  useEffect(() => {
+    const lastSavedValue = localStorage.getItem('lastQuestion');
+    const clickedQuestion = localStorage.getItem('clickedQuestions');
+    console.log(clickedQuestion)
+    if(lastSavedValue){
+      setQuestionNumber(lastSavedValue)
+    }
+    
+  }, [])
+
+
 
   const handleStartOver = () => {
     setQuestionNumber('One');
     setIsInitialPage(true);
     setClickedQuestions([]);
+    localStorage.setItem('lastQuestion','One');
   }
 
   const handleBackBtn = () => {
@@ -52,7 +65,7 @@ function App() {
             return (
               <TwoColumnLayout
                 img="androidLogo.png"
-                componentChild={<QuestionOne setQuestionNumber={setQuestionNumber} setClickedQuestions={setClickedQuestions} />}
+                componentChild={<QuestionOne setQuestionNumber={setQuestionNumber} setClickedQuestions={setClickedQuestions} ClickedQuestions={ClickedQuestions} />}
               />
             );
           case 'Two':
@@ -98,3 +111,6 @@ function App() {
 }
 
 export default App;
+
+
+
