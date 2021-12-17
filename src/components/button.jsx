@@ -7,6 +7,9 @@ const Button = ({btnName, handleClick}) => {
 
     const handleBtnClick = () => {
         setIsBtnClicked(true);
+        setTimeout(() => {
+            setIsBtnClicked(false);
+        },2000)
         return handleClick()
     }
     return(

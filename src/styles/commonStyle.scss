@@ -69,6 +69,10 @@ li > svg {
     color: #1A73E8;
 }
 
+.hide{
+    display: none;
+}
+
 @keyframes spin{
     from {
       transform: rotate(0deg);

@@ -1,9 +1,11 @@
-export const handleButtonClick = (val, setValue, setClickedQuestions, ClickedQuestions) => {
+export const handleButtonClick = (val, setValue, setClickedQuestions) => {
    setTimeout(() => {
+      if(val === "One" || val === "Success" || val === "Failure"){
+         localStorage.clear();
+      } else {
+        localStorage.setItem('lastQuestion',val);
+      }
     setValue(val);
     setClickedQuestions(prevState => [...prevState, val]);
-    console.log("Setting the question value", val)
-    localStorage.setItem('lastQuestion',val);
-    localStorage.setItem('clickedQuestions', ClickedQuestions)
    }, 2000) 
 }
